@@ -15,5 +15,7 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband" /v
 # #2 Path
 ```bat
 :: Path.
-%AppData%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar
+"%AppData%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar"
+"%ProgramData%\Microsoft\Windows\Start Menu\Programs"
+"%AppData%\Microsoft\Internet Explorer\Quick Launch"
 ```
