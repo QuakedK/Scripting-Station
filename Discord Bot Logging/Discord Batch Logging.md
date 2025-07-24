@@ -42,7 +42,7 @@ python "C:\logger_bot.py
 **(Batch Implementation)**
 > [!CAUTION]
 > If the **logger_bot.py** is shared, others will have **access** to you're **discord bot**, etc. In order to prevent this you can try **encrypting the token, compiling an exe from the .py script or hosting a server cotaining the token privately**.
-The **last option** in theory should be the **safest**, learn here **[Server Hosting]()**.
+The **last option** in theory should be the **safest**, learn here **[Server Hosting](https://github.com/QuakedK/Scripting-Station/blob/main/Discord%20Bot%20Logging/Discord%20Batch%20Logging.md#3-server-hosting---hardest-difficulty)**.
 
 1. Re-edit your "**logger_bot.py**" with the **following code**. ↓ - **(Don't forget to replace the Webhook)**
 ```Python
@@ -183,7 +183,7 @@ python "C:\logger_bot.py
 (Batch)
 > [!CAUTION]
 > If the **logger_bot.py** is shared, others will have **access** to you're **discord bot**, etc. In order to prevent this you can try **encrypting the token, compiling an exe from the .py script or hosting a server cotaining the token privately**.
-The **last option** in theory should be the **safest**, learn here **[Server Hosting]()**.
+The **last option** in theory should be the **safest**, learn here **[Server Hosting](https://github.com/QuakedK/Scripting-Station/blob/main/Discord%20Bot%20Logging/Discord%20Batch%20Logging.md#3-server-hosting---hardest-difficulty)**.
 
 1. Re-edit your "**logger_bot.py**" with the **following code** ↓ - (**Don't forget to replace Bot Token and Channel ID**)
 ```Python
