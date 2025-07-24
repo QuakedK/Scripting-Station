@@ -1,6 +1,6 @@
 # Log your Batch file using a Discord Bot or Webhook.
 
-# #1 Discord Webhook - (Easiest) 
+# #1 Discord Webhook - (Easiest Difficulty) 
 
 **(Webhook Setup)**
 1. Create your desired logging channel, then open the **settings** of that **channel** and go to **Integrations**. 
@@ -9,7 +9,7 @@
 **(Python Setup)**
 1. Go to the [Python Website](https://www.python.org/downloads/), download the lastest version, check "**Add python.exe to PATH**" upon installation.
 2. Once installed open **CMD** and type "**python --version**" if the version shows up you're good to go!
-3. Now open **Notepad** and copy the **following code** ↓ naming it E.g. **logger_bot.py**
+3. Now open **Notepad** and copy & paste the **following code** ↓ naming it E.g. **logger_bot.py**
 ```Python
 import requests
 
@@ -31,17 +31,20 @@ def send_log(message: str):
 # Example log message (replace with dynamic content if desired)
 send_log("📝 UUID: Example_UUID ran Option 1.")
 ```
-4. Now edit "**logger_bot.py**" or the **.py file** you created and change the **WEBHOOK_URL** with you copied one in discord.
-5. Now open CMD and paste python "C:\...\...\logger_bot.py" (Replace Path with your Python Script Path).
-6. If successful, you're discord bot should send the data to your desired discord channel.
+4. Now edit "**logger_bot.py**" or the **.py file** you created and change the **WEBHOOK_URL** with you copied from your **Discord Channel**.
+5. Now open **CMD** and copy & paste the following code. ↓ - **(Replace Path with your Python Script Path)**
+```Bat
+:: Replace Path with your Python Script Path
+python "C:\logger_bot.py
+```
+6. If **successful**, you're **discord bot** should send the **log** to your **desired discord channel**.
 
-**(Batch)**
+**(Batch Implementation)**
 > [!CAUTION]
 > If the **logger_bot.py** is shared, others will have **access** to you're **discord bot**, etc. In order to prevent this you can try **encrypting the token, compiling an exe from the .py script or hosting a server cotaining the token privately**.
 The **last option** in theory should be the **safest**, learn here **[Server hosting]()**.
 
-
-1. Re-edit your "logger_bot.py" with the following. (Don't forget to replace Webhook)
+1. Re-edit your "**logger_bot.py**" with the following code. ↓ - **(Don't forget to replace the Webhook)**
 ```Python
 import sys
 import requests
@@ -72,7 +75,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-2. Now lets create a batch that not only gets the UUID but also get the choice. (Python must be installed and don't forget to change the batch's path of the .py script)
+2. Now open **Notepad** and lets create a **batch/.bat** that not only gets a **UUID** but also the **Users Choice**. - **(Python must be installed and don't forget to change the batch's path of the .py script)**
 ```bat
 @echo off
 setlocal enabledelayedexpansion
@@ -122,4 +125,17 @@ endlocal
 python "C:\MyProject\tools\send_log.py" !UUID! !User_Choice!
 pause
 ```
-3. Once done run the bat file and see if the bot responds!
+3. Once done run the **bat file** and see if the bot responds!
+
+# #2 Discord Bot - (Medium Difficulty)
+
+**(Bot Setup)**
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Login into your discord than click New Application (top right).
+3. On the left sidebar, click Bot and change the icon and name how you see fit.
+4. Now navigate to OAuth2, then scroll down to OAuth2 URL Generator and select Bot, and under Bot Permissions give it Administrator.
+5. While in OAuth2, you should now see Generated URL at the very bottom and now paste that into your browser and have your bot join your discord Server.
+6. Go back to Bot and click Reset Token and keep it ready and handy. (DO NOT SHARE)
+
+
+
