@@ -1,4 +1,20 @@
-# Log your Batch file using a Discord Bot or Webhook.
+# Log your Batch file with a Discord Bot or Webhook, using Python.
+Want to step up your Logging System in batch and log beyond [One Line Logging](https://github.com/QuakedK/Scripting-Station/blob/main/Scripts/File%20Logging/One%20Line%20Log.bat), [Subroutine Based Logging](https://github.com/QuakedK/Scripting-Station/blob/main/Scripts/File%20Logging/Subroutine%20Based%20Log.bat) and [Wrapped Brackets Logging](https://github.com/QuakedK/Scripting-Station/blob/main/Scripts/File%20Logging/Wrapped%20Bracket%20Log.bat)?                                       
+Lets take advantage of Discords API to store logs beyond sitting client side in a user's folder while still staying in native batch! In this guide will go over Discord Bots, Webhooks, Python and Free Server Hosting.
+
+Now just because Python is mentioned doesn't mean were aren't able to natively pull this off in batch. We call, execute and run the created Python script within the Batch file, then the Python script captures our inputs from the batch file and sends it off to Discord. However, theoretically it's still possible to cut out Python as a middleman by using Curl to send data to a server and that server fowards that to the Discord API. However, even better you can theoretically cut out an additional server middleman by curling directly to Discord's API. 
+
+Now to be totally clear and transparent, I just genuinely did not think none Python methods before documenting my experience and making this guide. However I will, eventually go through the t trouble of creating and documenting my experience without python makigng sure to make everyone happy. I'm also not going to pretend like I know Python and totally did not use ChatGPT to generate half of those Python scripts, but I can confirm after testing, they do in fact work. If you would like to contribute to the development of these Python scripts, or have any critiques, don't be afraid to contact me, or specifically post issues in this GitHub.
+
+# Table of Contents
+**(Python)**
+- [#1 Discord Webhook - (Easiest Difficulty)](#1-discord-webhook---easiest-difficulty)
+- [#2 Discord Bot - (Medium Difficulty)](#2-discord-bot---medium-difficulty)
+- [#3 Server Hosting - (Hardest Difficulty)](#3-server-hosting---hardest-difficulty)
+- [#4 Future Security Section]()
+
+**(None Python)**
+- [#1 Possibly Added in The Future]()
 
 # #1 Discord Webhook - (Easiest Difficulty) 
 
