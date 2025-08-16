@@ -97,6 +97,10 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\wusa.exe"
 "C:\Windows\System32\en-US\wusa.exe.mui"
 
+:: MusUpdateHandlers.dll, MusUpdateHandlers1.dll (Modern Update Settings Handler)
+"C:\Windows\System32\MusUpdateHandlers.dll"
+"C:\Windows\System32\MusUpdateHandlers1.dll"
+
 :: MoNotification, MoNotificationUxStub (Windows Update Notifications & UX)
 "C:\Windows\UUS\amd64\MoNotificationUx.exe"
 "C:\Windows\System32\MoNotificationUxStub.exe"
@@ -106,9 +110,5 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\WaaSMedicPS.dll"
 "C:\Windows\System32\WaaSAssessment.dll"
 "C:\Windows\UUS\amd64\WaaSMedicAgent.exe"
-
-:: MusUpdateHandlers.dll, MusUpdateHandlers1.dll (Modern Update Settings Handler)
-"C:\Windows\System32\MusUpdateHandlers.dll"
-"C:\Windows\System32\MusUpdateHandlers1.dll"
 
 ``` 
