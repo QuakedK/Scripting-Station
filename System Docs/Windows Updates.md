@@ -106,4 +106,9 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\WaaSMedicPS.dll"
 "C:\Windows\System32\WaaSAssessment.dll"
 "C:\Windows\UUS\amd64\WaaSMedicAgent.exe"
+
+:: MusUpdateHandlers.dll, MusUpdateHandlers1.dll (Modern Update Settings Handler)
+"C:\Windows\System32\MusUpdateHandlers.dll"
+"C:\Windows\System32\MusUpdateHandlers1.dll"
+
 ``` 
