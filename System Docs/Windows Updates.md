@@ -43,8 +43,8 @@ schtasks /Delete /TN "Microsoft\Windows\UpdateOrchestrator\UIEOrchestrator" /F
 schtasks /Delete /TN "Microsoft\Windows\UpdateOrchestrator\UpdateModelTask" /F 
 schtasks /Delete /TN "Microsoft\Windows\UpdateOrchestrator\USO_UxBroker" /F
 schtasks /Delete /TN "Microsoft\Windows\UpdateOrchestrator\UUS Failover Task" /F
-schtasks /Delete /TN "Microsoft\Windows\WaaSMedic\PerformRemediation" /Disable
-schtasks /Delete /TN "Microsoft\Windows\WindowsUpdate\Scheduled Start" /Disable
+schtasks /Delete /TN "Microsoft\Windows\WaaSMedic\PerformRemediation" /F
+schtasks /Delete /TN "Microsoft\Windows\WindowsUpdate\Scheduled Start" /F
 ```
 
 # #3 Reg Edit
