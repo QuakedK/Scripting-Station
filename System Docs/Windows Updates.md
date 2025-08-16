@@ -68,6 +68,9 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 ```
 
 # #4 Exe's
+> [!NOTE]
+> You can find more update related things in "C:\Windows\UUS\amd64"
+
 ```bat
 :: UsoCoreWorker (Used by Updates)
 "C:\Windows\System32\UsoClient.exe"
@@ -88,18 +91,19 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 
 :: Wuauclt. (Legacy Windows Update client, mostly deprecated post-Windows 10 1709)
 "C:\Windows\System32\wuauclt.exe"
+"C:\Windows\UUS\amd64\wuaucltcore.exe"
 
 :: Wusa. (Windows Update Standalone Installer)
 "C:\Windows\System32\wusa.exe"
 "C:\Windows\System32\en-US\wusa.mui"
 
-:: MusNotification, MusNotificationUx, MoNotificationUxStub (Windows Update Notifications & UX)
-"C:\Windows\System32\MusNotification.exe"
-"C:\Windows\System32\MoNotificationUxStub.exe"
+:: MoNotification, MoNotificationUxStub (Windows Update Notifications & UX)
+"C:\Windows\UUS\amd64\MoNotificationUx.exe"
 "C:\Windows\System32\MoNotificationUxStub.exe"
 
-:: WaaSMedicSvc.dll, WaaSMedicPS.dll, WaaSAssessment.dll. (Update Medic Self-Healing Framework)
+:: WaaSMedicAgent.exe, WaaSMedicSvc.dll, WaaSMedicPS.dll, WaaSAssessment.dll. (Update Medic Self-Healing Framework)
 "C:\Windows\System32\WaaSMedicSvc.dll"
 "C:\Windows\System32\WaaSMedicPS.dll"
 "C:\Windows\System32\WaaSAssessment.dll"
+"C:\Windows\UUS\amd64\WaaSMedicAgent.exe"
 ``` 
