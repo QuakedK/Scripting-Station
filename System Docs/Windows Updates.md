@@ -95,7 +95,7 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 
 :: Wusa. (Windows Update Standalone Installer)
 "C:\Windows\System32\wusa.exe"
-"C:\Windows\System32\en-US\wusa.mui"
+"C:\Windows\System32\en-US\wusa.exe.mui"
 
 :: MoNotification, MoNotificationUxStub (Windows Update Notifications & UX)
 "C:\Windows\UUS\amd64\MoNotificationUx.exe"
