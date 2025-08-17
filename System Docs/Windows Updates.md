@@ -79,6 +79,12 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\UUS\amd64\MoUsoCoreWorker.exe"
 
 :: UpdateAgent.dll, UpdateCompression.dll, updatecsp.dll, updatepolicy.dll, UpdateReboot.dll, UpgradeResultsUI.exe. (All Tied to Windows Updates)
+"C:\Windows\System32\UpdateAgent.dll"
+"C:\Windows\System32\UpdateCompression.dll"
+"C:\Windows\System32\updatecsp.dll"
+"C:\Windows\System32\updatepolicy.dll"
+"C:\Windows\System32\UpdateReboot.dll"
+"C:\Windows\System32\UpgradeResultsUI.exe"
 
 :: UPFC (Updateability From SCM) | Note: Help Windows Updates by working with Servicing Component Manager (SCM)
 "C:\Windows\System32\upfc.exe"
