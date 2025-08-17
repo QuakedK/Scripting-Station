@@ -95,6 +95,9 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: Delivery Optimization DLL. (Delivery Optimization has a dll instead of exe)
 "C:\Windows\System32\DoSvc.dll"
 "C:\Windows\System32\en-US\DoSvc.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-deliveryoptimization_*\dosvc.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-deliveryoptimization_*\r\dosvc.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-d*imization.resources_*\dosvc.dll.mui"
 
 :: Server Initiated Healing client. (Repairs update components silently)
 "C:\Windows\System32\SIHClient.exe"
