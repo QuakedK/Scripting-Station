@@ -78,8 +78,13 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: UsoClient (Tied to UsoCoreWorker)
 "C:\Windows\UUS\amd64\MoUsoCoreWorker.exe"
 
+:: UpdateAgent.dll, UpdateCompression.dll, updatecsp.dll, updatepolicy.dll, UpdateReboot.dll, UpgradeResultsUI.exe. (All Tied to Windows Updates)
+
 :: UPFC (Updateability From SCM) | Note: Help Windows Updates by working with Servicing Component Manager (SCM)
 "C:\Windows\System32\upfc.exe"
+
+:: Update Orchestrator.
+"C:\Windows\System32\UIEOrchestrator.exe"
 
 :: Delivery Optimization DLL. (Delivery Optimization has a dll instead of exe)
 "C:\Windows\System32\DoSvc.dll"
