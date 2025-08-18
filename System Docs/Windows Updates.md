@@ -85,18 +85,27 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\updatepolicy.dll"
 "C:\Windows\System32\UpdateReboot.dll"
 "C:\Windows\System32\UpgradeResultsUI.exe"
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-onecore-u*latform-updateagent_*\UpdateAgent.dll"
+"C:\Windows\WinSxS\amd64_microsoft-onecore-u*latform-updateagent_*\r\UpdateAgent.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_*\updateagent.dll"
+"C:\Windows\WinSxS\x86_microsoft-windows-servicingstack_*\updateagent.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_*\UpdateCompression.dll"
+"C:\Windows\WinSxS\x86_microsoft-windows-servicingstack_*\UpdateCompression.dll"
 
 :: UPFC (Updateability From SCM) | Note: Help Windows Updates by working with Servicing Component Manager (SCM)
 "C:\Windows\System32\upfc.exe"
 
 :: Update Orchestrator.
 "C:\Windows\System32\UIEOrchestrator.exe"
+-----------------------------------------
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*xis-uieorchestrator_*\UIEOrchestrator.exe*"
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*xis-uieorchestrator_*\UIEApi.dll*"
 
 :: Delivery Optimization DLL. (Delivery Optimization has a dll instead of exe)
 "C:\Windows\System32\DoSvc.dll"
 "C:\Windows\System32\en-US\DoSvc.dll.mui"
+-----------------------------------------
 "C:\Windows\WinSxS\amd64_microsoft-windows-deliveryoptimization_*\dosvc.dll"
 "C:\Windows\WinSxS\amd64_microsoft-windows-deliveryoptimization_*\r\dosvc.dll"
 "C:\Windows\WinSxS\amd64_microsoft-windows-d*imization.resources_*\dosvc.dll.mui"
@@ -104,6 +113,7 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: Server Initiated Healing client. (Repairs update components silently)
 "C:\Windows\System32\SIHClient.exe"
 "C:\Windows\System32\en-US\sihclient.exe.mui"
+-----------------------------------------
 "C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client.resources_*\sihclient.exe.mui"
 "C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client.resources_*\r\sihclient.exe.mui"
 "C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client_*\SIHClient.exe"
@@ -120,18 +130,20 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: MusUpdateHandlers.dll, MusUpdateHandlers1.dll (Modern Update Settings Handler)
 "C:\Windows\System32\MusUpdateHandlers.dll"
 "C:\Windows\System32\en-US\MusUpdateHandlers.dll.mui"
-"C:\Windows\WinSxS\amd64_microsoft-windows-u*x-musupdatehandlers_\MusUpdateHandlers.dll*"
 "C:\Windows\System32\MusUpdateHandlers1.dll"
 "C:\Windows\System32\en-US\MusUpdateHandlers1.dll.mui"
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*x-musupdatehandlers_\MusUpdateHandlers.dll*"
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*x-musupdatehandlers_\MusUpdateHandlers.dll1*"
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*ehandlers.resources_*\MusUpdateHandlers1.dll.mui"
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*ehandlers.resources_*\r\MusUpdateHandlers1.dll.mui"
 
 :: MoNotification, MoNotificationUxStub (Windows Update Notifications & UX)
 "C:\Windows\UUS\amd64\MoNotificationUx.exe"
+"C:\Windows\System32\MoNotificationUxStub.exe"
+-----------------------------------------
 "C:\Windows\WinSxS\amd64_microsoft-windows-update-uus-core-ux_*\MoNotificationUx.exe"
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*n-preview.resources_*\MoNotificationUx.exe"
-"C:\Windows\System32\MoNotificationUxStub.exe"
 "C:\Windows\WinSxS\amd64_microsoft-windows-update-uus-core-ux_*\MoNotificationUxStub.exe"
 "C:\Windows\WinSxS\amd64_microsoft-windows-u*n-preview.resources_*\MoNotificationUxStub.exe"
 
