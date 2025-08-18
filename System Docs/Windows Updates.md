@@ -102,6 +102,10 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: Server Initiated Healing client. (Repairs update components silently)
 "C:\Windows\System32\SIHClient.exe"
 "C:\Windows\System32\en-US\sihclient.exe.mui"
+"C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client.resources_*\sihclient.exe.mui"
+"C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client.resources_*\r\sihclient.exe.mui"
+"C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client_*\SIHClient.exe"
+"C:\Windows\WinSxS\amd64_serviceinitiatedhealing-client_*\r\SIHClient.exe"
 
 :: Wuauclt. (Legacy Windows Update client, mostly deprecated post-Windows 10 1709)
 "C:\Windows\System32\wuauclt.exe"
@@ -126,5 +130,6 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\WaaSMedicPS.dll"
 "C:\Windows\System32\WaaSAssessment.dll"
 "C:\Windows\UUS\amd64\WaaSMedicAgent.exe"
+
 
 ``` 
