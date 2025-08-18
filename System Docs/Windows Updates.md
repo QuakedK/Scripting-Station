@@ -118,8 +118,10 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: MusUpdateHandlers.dll, MusUpdateHandlers1.dll (Modern Update Settings Handler)
 "C:\Windows\System32\MusUpdateHandlers.dll"
 "C:\Windows\System32\en-US\MusUpdateHandlers.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*x-musupdatehandlers_\MusUpdateHandlers.dll*"
 "C:\Windows\System32\MusUpdateHandlers1.dll"
 "C:\Windows\System32\en-US\MusUpdateHandlers1.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*x-musupdatehandlers_\MusUpdateHandlers.dll1*"
 
 :: MoNotification, MoNotificationUxStub (Windows Update Notifications & UX)
 "C:\Windows\UUS\amd64\MoNotificationUx.exe"
