@@ -180,6 +180,17 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\WaaSMedicPS.dll"
 "C:\Windows\System32\WaaSAssessment.dll"
 "C:\Windows\UUS\amd64\WaaSMedicAgent.exe"
-
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasassessment_*\WaaSAssessment.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasassessment_*\r\WaaSAssessment.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\WaaSMedicPS.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\r\WaaSMedicPS.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\WaaSMedicSvc.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\r\WaaSMedicSvc.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\WaaSMedicSvcImpl.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\r\WaaSMedicSvcImpl.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic.resources_*\WaaSMedicSvcImpl.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\WaaSMedicAgent.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\r\WaaSMedicAgent.exe"
 
 ``` 
