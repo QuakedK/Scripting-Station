@@ -124,8 +124,10 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: MoNotification, MoNotificationUxStub (Windows Update Notifications & UX)
 "C:\Windows\UUS\amd64\MoNotificationUx.exe"
 "C:\Windows\WinSxS\amd64_microsoft-windows-update-uus-core-ux_*\MoNotificationUx.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*n-preview.resources_*\MoNotificationUx.exe"
 "C:\Windows\System32\MoNotificationUxStub.exe"
 "C:\Windows\WinSxS\amd64_microsoft-windows-update-uus-core-ux_*\MoNotificationUxStub.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*n-preview.resources_*\MoNotificationUxStub.exe"
 
 :: WaaSMedicAgent.exe, WaaSMedicSvc.dll, WaaSMedicPS.dll, WaaSAssessment.dll. (Update Medic Self-Healing Framework)
 "C:\Windows\System32\WaaSMedicSvc.dll"
