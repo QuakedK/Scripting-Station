@@ -91,6 +91,8 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 
 :: Update Orchestrator.
 "C:\Windows\System32\UIEOrchestrator.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*xis-uieorchestrator_31bf3856ad364e35_10.0.26100.3037_\UIEOrchestrator.exe*"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*xis-uieorchestrator_31bf3856ad364e35_10.0.26100.3037_\UIEApi.dll*"
 
 :: Delivery Optimization DLL. (Delivery Optimization has a dll instead of exe)
 "C:\Windows\System32\DoSvc.dll"
