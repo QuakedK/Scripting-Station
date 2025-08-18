@@ -74,6 +74,8 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 ```bat
 :: UsoCoreWorker (Used by Updates)
 "C:\Windows\System32\UsoClient.exe"
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-windows-update-uus-core_*\UsoClient.exe"
 
 :: UsoClient (Tied to UsoCoreWorker)
 "C:\Windows\UUS\amd64\MoUsoCoreWorker.exe"
