@@ -69,7 +69,9 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 
 # #4 Exe's
 > [!NOTE]
-> You can find more update related things in "C:\Windows\UUS\amd64"
+> Things in "C:\Windows\UUS\amd64" aren't listed, you can find more things in there.
+
+Wanna download this code? Go to [Windows Update Exe's Remover.bat](https://github.com/QuakedK/Scripting-Station/blob/main/Scripts/Windows%20Updates/Windows%20Update%20Exe's%20Remover.bat)
 
 ```bat
 :: UsoCoreWorker (Used by Updates)
@@ -150,10 +152,21 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 :: Wuauclt. (Legacy Windows Update client, mostly deprecated post-Windows 10 1709)
 "C:\Windows\System32\wuauclt.exe"
 "C:\Windows\UUS\amd64\wuaucltcore.exe"
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-windows-w*wsupdateclient-core_*\wuaucltcore.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-w*wsupdateclient-core_*\r\wuaucltcore.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*client-core-preview_*\wuaucltcore.exe"
 
 :: Wusa. (Windows Update Standalone Installer)
 "C:\Windows\System32\wusa.exe"
 "C:\Windows\System32\en-US\wusa.exe.mui"
+"C:\Windows\SysWOW64\wusa.exe"
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-windows-wusa.resources_*\wusa.exe.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-wusa.resources_*\r\wusa.exe.mui"
+"C:\Windows\WinSxS\wow64_microsoft-windows-wusa_*\wusa.exe"
+"C:\Windows\WinSxS\wow64_microsoft-windows-wusa_*\r\wusa.exe"
+
 
 :: MusUpdateHandlers.dll, MusUpdateHandlers1.dll (Modern Update Settings Handler)
 "C:\Windows\System32\MusUpdateHandlers.dll"
@@ -192,5 +205,8 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic.resources_*\WaaSMedicSvcImpl.dll.mui"
 "C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\WaaSMedicAgent.exe"
 "C:\Windows\WinSxS\amd64_microsoft-windows-waasmedic_*\r\WaaSMedicAgent.exe"
+
+:: Extra
+"C:\Windows\UUS"
 
 ``` 
