@@ -83,8 +83,10 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\System32\UpdateCompression.dll"
 "C:\Windows\System32\updatecsp.dll"
 "C:\Windows\System32\updatepolicy.dll"
+"C:\Windows\System32\en-US\UpdatePolicy.dll.mui"
 "C:\Windows\System32\UpdateReboot.dll"
 "C:\Windows\System32\UpgradeResultsUI.exe"
+"C:\Windows\System32\en-US\UpgradeResultsUI.exe.mui"
 -----------------------------------------
 "C:\Windows\WinSxS\amd64_microsoft-onecore-u*latform-updateagent_*\UpdateAgent.dll"
 "C:\Windows\WinSxS\amd64_microsoft-onecore-u*latform-updateagent_*\r\UpdateAgent.dll"
@@ -106,11 +108,19 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\r\updatepolicy.dll"
 "C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\updatepolicycore.dll"
 "C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\r\updatepolicycore.dll"
-
-
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*e-preview.resources_*\updatepolicycore.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-u*policy-core-preview_*\updatepolicycore.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-update-aggregators_*\UpdateReboot.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-update-aggregators_*\r\UpdateReboot.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-security-spp-ux-dlg_*\UpgradeResultsUI.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-security-spp-ux-dlg_*\r\UpgradeResultsUI.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-s*pp-ux-dlg.resources_*\UpgradeResultsUI.exe.mui"
 
 :: UPFC (Updateability From SCM) | Note: Help Windows Updates by working with Servicing Component Manager (SCM)
 "C:\Windows\System32\upfc.exe"
+-----------------------------------------
+"C:\Windows\WinSxS\amd64_microsoft-windows-upfc_*\upfc.exe"
+"C:\Windows\WinSxS\amd64_microsoft-windows-upfc_*\r\upfc.exe"
 
 :: Update Orchestrator.
 "C:\Windows\System32\UIEOrchestrator.exe"
