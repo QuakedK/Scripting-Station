@@ -92,6 +92,22 @@ reg add "HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings" /v PauseUpdatesStart
 "C:\Windows\WinSxS\x86_microsoft-windows-servicingstack_*\updateagent.dll"
 "C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_*\UpdateCompression.dll"
 "C:\Windows\WinSxS\x86_microsoft-windows-servicingstack_*\UpdateCompression.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-deltapackageexpander_*\UpdateCompression.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-deltapackageexpander_*\r\UpdateCompression.dll"
+"C:\Windows\WinSxS\wow64_microsoft-windows-deltapackageexpander_*\UpdateCompression.dll"
+"C:\Windows\WinSxS\wow64_microsoft-windows-deltapackageexpander_*\r\UpdateCompression.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-update-updatecsps_*\updatecsp.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-update-updatecsps_*\r\updatecsp.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy.resources_*\UpdatePolicy.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy.resources_*\r\UpdatePolicy.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy.resources_*\UpdatePolicyCore.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy.resources_*\r\UpdatePolicyCore.dll.mui"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\updatepolicy.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\r\updatepolicy.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\updatepolicycore.dll"
+"C:\Windows\WinSxS\amd64_microsoft-windows-updatepolicy_*\r\updatepolicycore.dll"
+
+
 
 :: UPFC (Updateability From SCM) | Note: Help Windows Updates by working with Servicing Component Manager (SCM)
 "C:\Windows\System32\upfc.exe"
