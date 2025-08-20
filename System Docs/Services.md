@@ -47,8 +47,9 @@ sc enumdepend [service] – List dependent services
 sc qdescription [service] – Show service description
 ```
 
-# Appinfo Service
-If **Application Information** is disabled, apps can't request admin permissions meaning you can't open the said apps requesting administrator. However disabling **Uac/User Account Control**, allows you to get away with disabling **AppInfo** 
+# Application Information Service
+**Application Information Service** or **Appinfo** is responsible for facilitating elevated privilege requests, meaning it allows apps to run as an administrator.
+If **Application Information** is disabled, apps can't request admin permissions meaning you can't open apps that request administrator. However disabling **Uac/User Account Control**, allows you to get away with disabling **AppInfo** 
 because with UAC off Windows auto-runs apps with admin rights. Ignoring the request of admin that normally happens when UAC is enabled!
 
 ```bat
@@ -59,5 +60,27 @@ sc config Appinfo start=disabled
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v EnableLUA /t REG_DWORD /d 0
 ```
 
+# Capability Access Manager Service
+**Capability Access Manager Service** or **camsvc** is responsible for managing permissions for apps to access certain system capabilities. If **Capability Access Manager Service** is disabled using you're mic on games, discord or basically anything becomes impossible.
 
+```bat
+:: Disable camsvc
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v Start /t REG_DWORD /d 4 /f
+```
 
+# Power Service
+The **Power Service** manages power policy and power policy notification delivery. If **Power Service** is disabled Power Plans will be broken.
+
+```bat
+:: Disable Power
+sc config Power start=disabled
+```
+
+# Windows Management Instrumentation Service
+**Windows Management Instrumentation Service** or **Winmgmt** is a core Windows service used for system management and monitoring. Tools that rely on WMI will not work if disabled, even anticheats tend to break. 
+
+Confrimed Broken Anticheat: Rocket League
+
+```bat
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v Start /t REG_DWORD /d 4 /f
+```
