@@ -73,6 +73,19 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v E
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v Start /t REG_DWORD /d 4 /f
 ```
 
+# Cryptographic Service
+**Cryptographic Service** or **CryptSvc** is responsible for checking digital signatures of Windows files, manages root certificates, and is required for Windows Update, drivers, and Store apps. 
+
+> [!CAUTION]
+> If **Capability Access Manager Service** is disabled, updates and certificate validation will fail. Windows protects this service with WRP (Windows Resource Protection), so it can’t easily be removed or disabled. However deleting in the registry works, but in my experince things like services.msc won't work due to weired UAC behavior after disabling CryptSvc. Disabling UAC seems to fix this issue.
+
+```bat
+reg delete "HKLM\System\CurrentControlSet\Services\CryptSvc" /f
+
+:: Disable UAC
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v EnableLUA /t REG_DWORD /d 0
+```
+
 # CoreMessaging Service
 **CoreMessaging Service** or **CoreMessagingRegistrar** is a core Windows service used for manageing communication between system components.
 
