@@ -97,6 +97,17 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v E
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v Start /t REG_DWORD /d 4 /f
 ```
 
+# DCOM Server Process Launcher Service
+**DCOM Server Process Launcher Service** or **DcomLaunch** starts and manages COM and DCOM servers. These are components many Windows applications and services rely on to communicate with each other.
+
+> [!CAUTION]
+> If this service is stopped or disabled, Windows will not boot properly, since core processes (including system logon) depend on it. 
+
+```bat
+:: Disable DcomLaunch
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v Start /t REG_DWORD /d 4 /f
+```
+
 # Power Service
 The **Power Service** manages power policy and system power events, like **sleep, hibernate, battery monitoring, energy efficiency, evice sleep states, power button actions and all power plans.
 
