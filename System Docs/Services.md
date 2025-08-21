@@ -108,6 +108,17 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v Start
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v Start /t REG_DWORD /d 4 /f
 ```
 
+# RPC Endpoint Mapper Service
+**RPC Endpoint Mapper Service** or **RpcEptMapper** Resolves RPC interfaces identifiers to transport endpoints.
+
+> [!CAUTION]
+> If this service is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly. And you won't be able to boot into windows!
+
+```bat
+:: Disable RpcEptMapper
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\RpcEptMapper" /v Start /t REG_DWORD /d 4 /f
+```
+
 # Power Service
 The **Power Service** manages power policy and system power events, like **sleep, hibernate, battery monitoring, energy efficiency, evice sleep states, power button actions and all power plans.
 
