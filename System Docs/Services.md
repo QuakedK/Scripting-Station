@@ -140,7 +140,7 @@ sc config Power start=disabled
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v Start /t REG_DWORD /d 4 /f
 ```
 
-# All Services
+# All Services (Created from scratch)
 
 ```bat
 :: Windows Services.
@@ -310,7 +310,7 @@ sc config OneSyncSvc start=disabled  :: Because it's a contains a random UserID 
 
 sc config p2pimsvc start=disabled :: Seemingly doesn't exist on 24H2.
 sc config p2psvc start=disabled :: Seemingly doesn't exist on 24H2.
-sc config P9RdrServiceUser start=disabled :: Because it's a contains a random UserID disable via registry.
+sc config P9RdrService start=disabled :: Because it's a contains a random UserID disable via registry.
 sc config PcaSvc start=disabled 
 sc config PeerDistSvc start=disabled :: Seemingly only on Pro/Enterprise verisons.
 sc config PenService start=disabled :: Because it's a contains a random UserID disable via registry.    
@@ -501,7 +501,7 @@ reg add "HKLM\System\CurrentControlSet\Services\NgcSvc" /v "Start" /t REG_DWORD 
 reg add "HKLM\System\CurrentControlSet\Services\NgcCtnrSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\NPSMSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\OneSyncSvc" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\System\CurrentControlSet\Services\P9RdrServiceUser" /v "Start" /t REG_DWORD /d "4" /f
+reg add "HKLM\System\CurrentControlSet\Services\P9RdrService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\PenService" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\PrintWorkflowUserSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\PimIndexMaintenanceSvc" /v "Start" /t REG_DWORD /d "4" /f
