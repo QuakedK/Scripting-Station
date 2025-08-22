@@ -130,6 +130,17 @@ The **Power Service** manages power policy and system power events, like **sleep
 sc config Power start=disabled
 ```
 
+# Time Broker Service
+The **Time Broker Service** or **TimeBrokerSvc** Coordinates execution of background work for WinRT application.
+
+> [!CAUTION]
+> If **Time Broker Service** is disabled Task Scheduler will be broken.
+
+```bat
+:: Disable TimeBrokerSvc
+reg add "HKLM\System\CurrentControlSet\Services\TimeBrokerSvc" /v "Start" /t REG_DWORD /d "4" /f
+```
+
 # Windows Management Instrumentation Service
 **Windows Management Instrumentation Service** or **Winmgmt** is a core Windows service used for system management and monitoring. 
 
