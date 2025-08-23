@@ -90,7 +90,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v E
 **CoreMessaging Service** or **CoreMessagingRegistrar** is a core Windows service used for manageing communication between system components.
 
 > [!CAUTION]
-> If CoreMessaging Service you'll get an infinite loading screen upon boot!        
+> If the **CoreMessaging Service** you'll get an infinite loading screen upon boot!        
 
 ```bat
 :: Disable CoreMessagingRegistrar
@@ -101,7 +101,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v Start
 **DCOM Server Process Launcher Service** or **DcomLaunch** starts and manages COM and DCOM servers. These are components many Windows applications and services rely on to communicate with each other.
 
 > [!CAUTION]
-> If this service is stopped or disabled, Windows will not boot properly, since core processes (including system logon) depend on it. 
+> If the **DCOM Server Process Launcher Service** is stopped or disabled, Windows will not boot properly, since core processes (including system logon) depend on it. 
 
 ```bat
 :: Disable DcomLaunch
@@ -112,7 +112,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v Start /t REG_DWOR
 **RPC Endpoint Mapper Service** or **RpcEptMapper** Resolves RPC interfaces identifiers to transport endpoints.
 
 > [!CAUTION]
-> If this service is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly. And you won't be able to boot into windows!
+> If the **RPC Endpoint Mapper Service** is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly. And you won't be able to boot into windows!
 
 ```bat
 :: Disable RpcEptMapper
@@ -128,6 +128,17 @@ The **Power Service** manages power policy and system power events, like **sleep
 ```bat
 :: Disable Power
 sc config Power start=disabled
+```
+
+# User Profile Service
+The **User Profile Service** or **ProfSvc** is responsible for loading and unloading user profiles.
+
+> [!CAUTION]
+> If ** User Profile Service** is disabled users will no longer be able to successfully sign in or sign out
+
+```bat
+:: Disable ProfSvc
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\ProfSvc" /v Start /t REG_DWORD /d 4 /f
 ```
 
 # Time Broker Service
