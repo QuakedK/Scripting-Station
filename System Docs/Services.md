@@ -162,6 +162,34 @@ reg add "HKLM\System\CurrentControlSet\Services\TimeBrokerSvc" /v "Start" /t REG
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v Start /t REG_DWORD /d 4 /f
 ```
 
+# New Services 24H2+ (Some appear on 23H2 too)
+```bat
+:: 24H2
+sc config ADPSvc start=disabled
+
+:: 23H2-24H2
+reg add "HKLM\System\CurrentControlSet\Services\CloudBackupRestoreSvc" /v "Start" /t REG_DWORD /d "4" /f
+
+:: 23H2-24H2
+sc config GameInputSvc start=disabled
+
+:: 24H2
+sc config McpManagementService start=disabled
+
+:: 24H2
+sc config PrintDeviceConfigurationService start=disabled
+
+:: 24H2
+sc config PrintScanBrokerService start=disabled
+
+:: 24H2
+sc config refsdedupsvc start=disabled
+
+:: 24H2
+sc config WSAIFabricSvc start=disabled
+
+```
+
 # All Services (Created from scratch)
 
 ```bat
