@@ -170,6 +170,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v Start /t REG_DWORD /
 sc config AarSvc start=disabled 
 sc config AJRouter start=disabled :: Seemingly doesn't exist on 24H2.
 sc config ALG start=disabled
+sc config ADPSvc start=disabled :: Seemlying only on 26100.4946
 sc config AppIDSvc start=disabled :: Needs to be disabled in the registry.
 sc config Appinfo start=disabled :: UAC needs to be disabled before disabling Appinfo otherwise apps won't be able to request admin permissions.
 sc config AppMgmt start=disabled  :: Seemingly only on Pro/Enterprise verisons.
