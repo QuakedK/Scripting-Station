@@ -199,7 +199,10 @@ sc config GameInputSvc start=disabled
 sc config McpManagementService start=disabled
 
 :: 24H2
-sc config PrintDeviceConfigurationService start=disabled
+sc config McpManagementService start=disabled
+
+:: 24H2
+sc config NPSMSvc start=disabled
 
 :: 24H2
 sc config PrintScanBrokerService start=disabled
