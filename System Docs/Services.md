@@ -119,6 +119,28 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v Start /t REG_DWOR
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\RpcEptMapper" /v Start /t REG_DWORD /d 4 /f
 ```
 
+# Microsoft Passport Service
+The **Microsoft Passport Service** or **NgcSvc** is responsible for managing Windows Hello/Passport (key-based authentication) for user sign-in.
+
+> [!CAUTION]
+> If **Microsoft Passport Service** login will be broken unless you installed with an offline/local account. Similar to [User Profile Service](https://github.com/QuakedK/Scripting-Station/blob/main/System%20Docs/Services.md#user-profile-service)
+
+```bat
+:: Disable NgcSvc
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcSvc" /v Start /t REG_DWORD /d 4 /f
+```
+
+# Microsoft Passport Container Service
+The **Microsoft Passport Container Service** or **NgcCtnrSvc** works alongside [Microsoft Passport Service]() to manage the containers and keys used by Windows Hello / Microsoft Passport for authentication.
+
+> [!CAUTION]
+> If **Microsoft Passport Container Service** login will be broken unless you installed with an offline/local account. Similar to [User Profile Service](https://github.com/QuakedK/Scripting-Station/blob/main/System%20Docs/Services.md#user-profile-service)
+
+```bat
+:: Disable NgcCtnrSvc
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcCtnrSvc" /v Start /t REG_DWORD /d 4 /f
+```
+
 # Power Service
 The **Power Service** manages power policy and system power events, like **sleep, hibernate, battery monitoring, energy efficiency, evice sleep states, power button actions and all power plans.
 
@@ -131,10 +153,10 @@ sc config Power start=disabled
 ```
 
 # User Profile Service
-The **User Profile Service** or **ProfSvc** is responsible for loading and unloading user profiles.
+The **User Profile Service** or **ProfSvc** is responsible for loading and unloading user profiles unless you installed with an offline/local account.
 
 > [!CAUTION]
-> If ** User Profile Service** is disabled users will no longer be able to successfully sign in or sign out
+> If **User Profile Service** is disabled users will no longer be able to successfully sign in or sign out
 
 ```bat
 :: Disable ProfSvc
@@ -188,6 +210,12 @@ sc config refsdedupsvc start=disabled
 :: 24H2
 sc config WSAIFabricSvc start=disabled
 
+:: 24H2
+sc config hpatchmon start=disabled
+
+:: 24H2
+sc config whesvc start=disabled
+
 ```
 
 # All Services (Created from scratch)
@@ -198,7 +226,7 @@ sc config WSAIFabricSvc start=disabled
 sc config AarSvc start=disabled 
 sc config AJRouter start=disabled :: Seemingly doesn't exist on 24H2.
 sc config ALG start=disabled
-sc config ADPSvc start=disabled :: Seemlying only on 26100.4946
+sc config ADPSvc start=disabled :: Seemlying only on 24H2/26100.4946
 sc config AppIDSvc start=disabled :: Needs to be disabled in the registry.
 sc config Appinfo start=disabled :: UAC needs to be disabled before disabling Appinfo otherwise apps won't be able to request admin permissions.
 sc config AppMgmt start=disabled  :: Seemingly only on Pro/Enterprise verisons.
@@ -295,7 +323,8 @@ sc config GraphicsPerfSvc start=disabled
 
 ---------------------------------------------------
  
-sc config hidserv start=demand :: Windows Core, left manual. 
+sc config hidserv start=demand :: Windows Core, left manual.
+sc config hpatchmon start=disabled :: Seemlying only on 24H2.
 sc config HvHost start=disabled
 
 ---------------------------------------------------
@@ -498,7 +527,8 @@ sc config Wecsvc start=disabled
 sc config WEPHOSTSVC start=disabled
 sc config wercplsupport start=disabled
 sc config WerSvc start=disabled
-sc config WFDSConMgrSvc start=disabled 
+sc config WFDSConMgrSvc start=disabled
+sc config whesvc start=disabled :: Seemingly only exist on 24H2.   
 sc config WiaRpc start=disabled
 sc config WinDefend start=auto :: Windows Core, left auto. 
 sc config Winmgmt start=auto :: Windows Core, left auto. 
@@ -548,8 +578,8 @@ reg add "HKLM\System\CurrentControlSet\Services\DoSvc" /v "Start" /t REG_DWORD /
 reg add "HKLM\System\CurrentControlSet\Services\EntAppSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\embeddedmode" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\MessagingService" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\System\CurrentControlSet\Services\NgcSvc" /v "Start" /t REG_DWORD /d "4" /f
-reg add "HKLM\System\CurrentControlSet\Services\NgcCtnrSvc" /v "Start" /t REG_DWORD /d "4" /f
+reg add "HKLM\System\CurrentControlSet\Services\NgcSvc" /v "Start" /t REG_DWORD /d "4" /f :: Prevents login on nonlocal accounts.
+reg add "HKLM\System\CurrentControlSet\Services\NgcCtnrSvc" /v "Start" /t REG_DWORD /d "4" /f :: Prevents login on nonlocal accounts.
 reg add "HKLM\System\CurrentControlSet\Services\NPSMSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\OneSyncSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\P9RdrService" /v "Start" /t REG_DWORD /d "4" /f
