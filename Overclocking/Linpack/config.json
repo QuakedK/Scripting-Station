@@ -1,0 +1,23 @@
+{
+  "test order": [2, 1],
+  "settings": {
+    "reduce output below X problem size": 0,
+    "track stats below X problem size": 0,
+    "stop after residual mismatch": true,
+    "KMP_AFFINITY": "nowarnings,compact,1,0,granularity=fine"
+  },
+  "tests": {
+    "1": {
+      "minutes": 60,
+      "problem size": 3536,
+      "leading dimension": 3536,
+      "alignment value": 4
+    },
+    "2": {
+      "minutes": 60,
+      "problem size": 39984,
+      "leading dimension": 39984,
+      "alignment value": 4
+    }
+  }
+}
