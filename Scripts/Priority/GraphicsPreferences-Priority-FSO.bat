@@ -12,12 +12,16 @@ setlocal enabledelayedexpansion
 :: Roblox Path.
 for /f "delims=" %%F in ('dir "C:\Program Files (x86)\Roblox\Versions\version-*" /ad /b /o:-d') do (
     set "LatestRobloxPath=C:\Program Files (x86)\Roblox\Versions\%%F\RobloxPlayerBeta.exe"
+    goto :End1
 )
+:End1
 
 :: Discord Path.
 for /f "delims=" %%D in ('dir "%USERPROFILE%\AppData\Local\Discord\app-*" /ad /b /o:-d') do (
     set "LatestDiscordPath=%USERPROFILE%\AppData\Local\Discord\%%D\Discord.exe"
+    goto :End2
 )
+:End2
 
 :: Games Paths.
 set "games[0]=%LatestRobloxPath%"
