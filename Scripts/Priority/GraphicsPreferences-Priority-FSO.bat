@@ -1,4 +1,10 @@
+:: Made by Quaked
+:: TikTok: _Quaked_
+:: Discord: https://discord.gg/8NqDSMzYun
+
 @echo off
+title Graphics Preferences, Priority and FSO.
+color 9
 
 :: Games & Apps Graphics Preferences, Priority and FSO.
 cls
@@ -9,69 +15,77 @@ echo ║ ✅ Auto Setting Graphics Preferences, Priority and FSO. ║
 echo ╚═════════════════════════════════════════════════════════╝
 setlocal enabledelayedexpansion
 
-:: Roblox Path.
-for /f "delims=" %%F in ('dir "C:\Program Files (x86)\Roblox\Versions\version-*" /ad /b /o:-d') do (
-    set "LatestRobloxPath=C:\Program Files (x86)\Roblox\Versions\%%F\RobloxPlayerBeta.exe"
+:: Program Files Roblox Path.
+for /f "delims=" %%R in ('dir "C:\Program Files (x86)\Roblox\Versions\version-*" /ad /b /o:-d') do (
+    set "ProgramFilesRobloxPath=C:\Program Files (x86)\Roblox\Versions\%%R\RobloxPlayerBeta.exe"
     goto :End1
 )
 :End1
 
-:: Discord Path.
-for /f "delims=" %%D in ('dir "%USERPROFILE%\AppData\Local\Discord\app-*" /ad /b /o:-d') do (
-    set "LatestDiscordPath=%USERPROFILE%\AppData\Local\Discord\%%D\Discord.exe"
+:: AppData Roblox Path.
+for /f "delims=" %%R in ('dir "%USERPROFILE%\AppData\Local\Roblox\Versions\version-*" /ad /b /o:-d') do (
+    set "AppDataRobloxPath=%USERPROFILE%\AppData\Local\Roblox\Versions\%%R\RobloxPlayerBeta.exe"
     goto :End2
 )
 :End2
 
+:: Discord Path.
+for /f "delims=" %%D in ('dir "%USERPROFILE%\AppData\Local\Discord\app-*" /ad /b /o:-d') do (
+    set "LatestDiscordPath=%USERPROFILE%\AppData\Local\Discord\%%D\Discord.exe"
+    goto :End3
+)
+:End3
+
 :: Games Paths.
-set "games[0]=%LatestRobloxPath%"
-set "games[1]=C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"
-set "games[2]=C:\Program Files\Epic Games\RocketLeague\Binaries\Win64\RocketLeague.exe"
-set "games[3]=C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
-set "games[4]=C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\RainbowSix.exe"
-set "games[5]=C:\Program Files (x86)\Steam\steamapps\common\Overwatch\Overwatch.exe"
-set "games[6]=C:\Program Files (x86)\Steam\steamapps\common\Trove\Games\Trove\Live\Trove.exe"
-set "games[7]=C:\Program Files (x86)\Steam\steamapps\common\VRChat\VRChat.exe"
-set "games[8]=C:\Program Files (x86)\Steam\steamapps\common\FPSAimTrainer\FPSAimTrainer.exe"
-set "games[9]=C:\Program Files (x86)\Steam\steamapps\common\Mafia The Old Country\MafiaTheOldCountry\Binaries\Win64\MafiaTheOldCountry.exe"
-set "games[10]=C:\Program Files (x86)\Steam\steamapps\common\The Forest\TheForest.exe"
-set "games[11]=C:\Program Files (x86)\Steam\steamapps\common\Dying Light 2\ph\work\bin\x64\DyingLightGame_x64_rwdi.exe"
-set "games[12]=C:\Program Files (x86)\Steam\steamapps\common\Schedule I\Schedule I.exe"
-set "games[13]=C:\Program Files (x86)\Steam\steamapps\common\Far Cry 3\bin\farcry3_d3d11.exe"
-set "games[14]=C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest.exe"
-set "games[15]=C:\Program Files (x86)\Steam\steamapps\common\Mafia Definitive Edition\mafiadefinitiveedition.exe"
-set "games[16]="C:\Program Files (x86)\Steam\steamapps\common\The Outlast Trials\OPP\Binaries\Win64\TOTClient-Win64-Shipping.exe"
-set "games[17]=%USERPROFILE%\AppData\Local\osu!\osu!.exe"
-set "games[18]=C:\Riot Games\VALORANT\live\VALORANT.exe"
-set "games[19]=C:\Program Files\Epic Games\VALORANT\VALORANT.exe"
-set "games[20]=C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe"
-set "games[21]=C:\Program Files\Epic Games\GTAV\GTAV.exe"
-set "games[22]=C:\Program Files\Rockstar Games\Grand Theft Auto V\GTA5.exe"
-set "games[23]=C:\Program Files\Epic Games\Apex\Apex.exe"
-set "games[24]=C:\Program Files (x86)\Steam\steamapps\common\Apex Legends\Apex Legends.exe"
-set "games[25]=C:\Program Files (x86)\Electronic Arts\Apex\Apex.exe"
-set "games[26]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops\BlackOps.exe"
-set "games[27]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops II\BlackOps2.exe"
-set "games[28]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\BlackOps3.exe"
-set "games[29]=C:\Program Files (x86)\Battle.net\Call of Duty Black Ops 4\BlackOps4.exe"
-set "games[30]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops Cold War\BlackOpsColdWar.exe"
-set "games[31]=C:\Program Files (x86)\Battle.net\Call of Duty Black Ops Cold War\BlackOpsColdWar.exe"
-set "games[32]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops 6\BlackOps6.exe"
-set "games[33]=C:\Program Files (x86)\Battle.net\Call of Duty Black Ops 6\BlackOps6.exe"
-set "games[34]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare\modernwarfare.exe"
-set "games[35]=C:\Program Files (x86)\Battle.net\Call of Duty Modern Warfare\modernwarfare.exe"
-set "games[36]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare II\cod22-cod.exe"
-set "games[37]=C:\Program Files (x86)\Battle.net\Call of Duty Modern Warfare II\cod22-cod.exe"
-set "games[38]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare III\cod23-cod.exe"
-set "games[39]=C:\Program Files (x86)\Battle.net\Call of Duty Modern Warfare III\cod23-cod.exe"
-set "games[40]=C:\Program Files\Genshin Impact\Genshin Impact Game\GenshinImpact.exe"
-set "games[41]=C:\Program Files\Epic Games\Genshin Impact\Genshin Impact Game\GenshinImpact.exe"
-set "games[42]=C:\Program Files (x86)\Steam\steamapps\common\Dead by Daylight\DeadByDaylight\Binaries\Win64\DeadByDaylight-Win64-Shipping.exe"
-set "games[43]=C:\Program Files\Epic Games\Dead by Daylight\DeadByDaylight\Binaries\Win64\DeadByDaylight-EGS-Shipping.exe"
-set "games[44]=C:\Program Files (x86)\Steam\steamapps\common\Aimlabs\AimLab_tb.exe"
-set "games[45]=C:\Program Files\Epic Games\Aimlabs\AimLab_tb.exe"
-set "games[46]=C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\RainbowSix.exe"
-set "games[47]=C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games\Tom Clancy's Rainbow Six Siege\RainbowSix.exe"
+set "games[0]=%ProgramFilesRobloxPath%"
+set "games[1]=%AppDataRobloxPath%"
+set "games[2]=C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64\FortniteClient-Win64-Shipping.exe"
+set "games[3]=C:\Program Files\Epic Games\RocketLeague\Binaries\Win64\RocketLeague.exe"
+set "games[4]=C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\bin\win64\cs2.exe"
+set "games[5]=C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\RainbowSix.exe"
+set "games[6]=C:\Program Files (x86)\Steam\steamapps\common\Overwatch\Overwatch.exe"
+set "games[7]=C:\Program Files (x86)\Steam\steamapps\common\Trove\Games\Trove\Live\Trove.exe"
+set "games[8]=C:\Program Files (x86)\Steam\steamapps\common\VRChat\VRChat.exe"
+set "games[9]=C:\Program Files (x86)\Steam\steamapps\common\FPSAimTrainer\FPSAimTrainer.exe"
+set "games[10]=C:\Program Files (x86)\Steam\steamapps\common\Mafia The Old Country\MafiaTheOldCountry\Binaries\Win64\MafiaTheOldCountry.exe"
+set "games[11]=C:\Program Files (x86)\Steam\steamapps\common\The Forest\TheForest.exe"
+set "games[12]=C:\Program Files (x86)\Steam\steamapps\common\Dying Light 2\ph\work\bin\x64\DyingLightGame_x64_rwdi.exe"
+set "games[13]=C:\Program Files (x86)\Steam\steamapps\common\Schedule I\Schedule I.exe"
+set "games[14]=C:\Program Files (x86)\Steam\steamapps\common\Far Cry 3\bin\farcry3_d3d11.exe"
+set "games[15]=C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest.exe"
+set "games[16]=C:\Program Files (x86)\Steam\steamapps\common\Mafia Definitive Edition\mafiadefinitiveedition.exe"
+set "games[17]=C:\Program Files (x86)\Steam\steamapps\common\The Outlast Trials\OPP\Binaries\Win64\TOTClient-Win64-Shipping.exe"
+set "games[18]=%USERPROFILE%\AppData\Local\osu!\osu!.exe"
+set "games[19]=C:\Riot Games\VALORANT\live\VALORANT.exe"
+set "games[20]=C:\Program Files\Epic Games\VALORANT\VALORANT.exe"
+set "games[21]=C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe"
+set "games[22]=C:\Program Files\Epic Games\GTAV\GTAV.exe"
+set "games[23]=C:\Program Files\Rockstar Games\Grand Theft Auto V\GTA5.exe"
+set "games[24]=C:\Program Files\Epic Games\Apex\Apex.exe"
+set "games[25]=C:\Program Files (x86)\Steam\steamapps\common\Apex Legends\Apex Legends.exe"
+set "games[26]=C:\Program Files (x86)\Electronic Arts\Apex\Apex.exe"
+set "games[27]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops\BlackOps.exe"
+set "games[28]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops II\BlackOps2.exe"
+set "games[29]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops III\BlackOps3.exe"
+set "games[30]=C:\Program Files (x86)\Battle.net\Call of Duty Black Ops 4\BlackOps4.exe"
+set "games[31]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops Cold War\BlackOpsColdWar.exe"
+set "games[32]=C:\Program Files (x86)\Battle.net\Call of Duty Black Ops Cold War\BlackOpsColdWar.exe"
+set "games[33]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Black Ops 6\BlackOps6.exe"
+set "games[34]=C:\Program Files (x86)\Battle.net\Call of Duty Black Ops 6\BlackOps6.exe"
+set "games[35]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare\modernwarfare.exe"
+set "games[36]=C:\Program Files (x86)\Battle.net\Call of Duty Modern Warfare\modernwarfare.exe"
+set "games[37]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare II\cod22-cod.exe"
+set "games[38]=C:\Program Files (x86)\Battle.net\Call of Duty Modern Warfare II\cod22-cod.exe"
+set "games[39]=C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare III\cod23-cod.exe"
+set "games[40]=C:\Program Files (x86)\Battle.net\Call of Duty Modern Warfare III\cod23-cod.exe"
+set "games[41]=C:\Program Files\Genshin Impact\Genshin Impact Game\GenshinImpact.exe"
+set "games[42]=C:\Program Files\Epic Games\Genshin Impact\Genshin Impact Game\GenshinImpact.exe"
+set "games[43]=C:\Program Files (x86)\Steam\steamapps\common\Dead by Daylight\DeadByDaylight\Binaries\Win64\DeadByDaylight-Win64-Shipping.exe"
+set "games[44]=C:\Program Files\Epic Games\Dead by Daylight\DeadByDaylight\Binaries\Win64\DeadByDaylight-EGS-Shipping.exe"
+set "games[45]=C:\Program Files (x86)\Steam\steamapps\common\Aimlabs\AimLab_tb.exe"
+set "games[46]=C:\Program Files\Epic Games\Aimlabs\AimLab_tb.exe"
+set "games[47]=C:\Program Files (x86)\Steam\steamapps\common\Tom Clancy's Rainbow Six Siege\RainbowSix.exe"
+set "games[48]=C:\Program Files (x86)\Ubisoft\Ubisoft Game Launcher\games\Tom Clancy's Rainbow Six Siege\RainbowSix.exe"
 
 :: Apps Paths. 
 set "apps[0]=%LatestDiscordPath%"
@@ -91,7 +105,6 @@ set "apps[13]=C:\Program Files\Google\Chrome\Application\chrome.exe"
 set "apps[14]=C:\Program Files\Open-Shell\StartMenu.exe"
 set "apps[15]=C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe"
 set "apps[16]=%USERPROFILE%\AppData\Local\Programs\Opera GX\launcher.exe"
-set "apps[17]=C:\Windows\explorer.exe"
 
 :: Other Paths. (Applies Only High Priority)
 set "other[0]=Adobe Premiere Pro.exe"
@@ -116,12 +129,12 @@ set "other[18]=7zG.exe"
 set "other[19]=7z.exe"
 
 :: Registry Keys.
-set regKeyGP=HKEY_CURRENT_USER\SOFTWARE\Microsoft\DirectX\UserGpuPreferences
-set regKeyPR=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
-set regKeyFO=HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
+set regKeyGP=HKCU\SOFTWARE\Microsoft\DirectX\UserGpuPreferences
+set regKeyPR=HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options
+set regKeyFO=HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
 
 :: Set Games to High Performance and High Priority.
-for /L %%i in (0, 1, 43) do (
+for /L %%i in (0, 1, 48) do (
     set "currentPath=!games[%%i]!"
     if exist "!currentPath!" (
         for %%a in (!currentPath!) do set "exeName=%%~nxa"
@@ -135,7 +148,7 @@ for /L %%i in (0, 1, 43) do (
 )
 
 :: Set Apps to Power Saving and Low Priority.
-for /L %%i in (0, 1, 17) do (
+for /L %%i in (0, 1, 16) do (
     set "currentPath=!apps[%%i]!"
     if exist "!currentPath!" (
         for %%a in (!currentPath!) do set "exeName=%%~nxa"
@@ -152,10 +165,9 @@ for /L %%i in (0, 1, 19) do (
     set "exeName=!other[%%i]!"
     reg add "%regKeyPR%\!exeName!\PerfOptions" /v "CpuPriorityClass" /t REG_DWORD /d "3" /f >nul 2>&1
 )
-
 endlocal
 
 echo ✔  Graphics Preferences, Priority and FSO applied successfully.
-timeout 999 > nul
-
+timeout 2 > nul
+exit
 
