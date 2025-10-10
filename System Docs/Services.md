@@ -152,6 +152,17 @@ The **Power Service** manages power policy and system power events, like **sleep
 sc config Power start=disabled
 ```
 
+# Udk User Service
+The **Udk User Service** or **UdkUserSvc** is responsible for Shell components Start menu, taskbar, quick settings, etc.
+
+> [!CAUTION]
+> If **Udk User Service** is disabled it will slow down searching to a horrible degree.
+
+```bat
+:: Disable UdkUserSvc
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\UdkUserSvc" /v Start /t REG_DWORD /d 4 /f
+```
+
 # User Profile Service
 The **User Profile Service** or **ProfSvc** is responsible for loading and unloading user profiles unless you installed with an offline/local account.
 
