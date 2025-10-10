@@ -164,10 +164,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\UdkUserSvc" /v Start /t REG_DWOR
 ```
 
 # User Profile Service
-The **User Profile Service** or **ProfSvc** is responsible for loading and unloading user profiles unless you installed with an offline/local account.
+The **User Profile Service** or **ProfSvc** is responsible for loading and unloading user profiles.
 
 > [!CAUTION]
-> If **User Profile Service** is disabled users will no longer be able to successfully sign in or sign out
+> If **User Profile Service** is disabled users will no longer be able to successfully sign in or sign out.
 
 ```bat
 :: Disable ProfSvc
