@@ -31,10 +31,18 @@ HKLM\System\CurrentControlSet\Control
 48GB = 50331648 Decimal/3000000 Hexadecimal
 64GB = 67108864 Decimal/4000000 Hexadecimal
 128GB = 134217728 Decimal/8000000 Hexadecimal
+
+4TB = 4294967295 Decimal/ffffffff Hexadecimal
+(This effectively disables process splitting by using the maximum possible DWORD value.)
 ```
 <img width="1224" height="746" alt="image" src="https://github.com/user-attachments/assets/703f25c5-13f2-4864-b084-787fd8a3550f" />
 
-# #4. Automatically Change the value with a simple script!
+# #4. Effectively disable process splitting by using the maximum possible DWORD value!
+[Disable Svchost Splitting V1.0](https://github.com/QuakedK/Scripting-Station/blob/main/Scripts/Split%20Schost/Disable%20Svchost%20Splitting%20V1.0.bat)
+```
+reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d "4294967295" /f 
+```
+
+# #5. Automatically Change the value with a simple script!
 1. Download and run [Split Svchost V1.0.bat](https://github.com/QuakedK/Scripting-Station/blob/main/Scripts/Split%20Schost/Split%20Svchost%20V1.0.bat) as admin!
 <img width="978" height="512" alt="image" src="https://github.com/user-attachments/assets/07d19864-c614-46f5-bfb1-2f4e92344066" />
-
