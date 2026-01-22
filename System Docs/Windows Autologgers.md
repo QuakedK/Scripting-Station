@@ -19,3 +19,46 @@ Tpm - May cause Anti-Cheat issues.
 TPMProvisioningService - May cause Anti-Cheat issues.
 
 ```
+# Full list
+```
+Cellcore
+CimFSUnionFS-Filter
+Circular Kernel Context Logger 
+CloudExperienceHostOobe 
+DefenderApiLogger 
+DefenderAuditLogger 
+DiagLog 
+Diagtrack-Listener 
+EventLog-Application 
+EventLog-Security 
+EventLog-System
+FilterMgr-Logger
+FaceTel 
+LwtNetLog 
+Mellanox-Kernel 
+Microsoft-Windows-Rdp-Graphics-RdpIdd-Trace 
+Microsoft-Windows-Setup 
+NBSMBLOGGER 
+NetCore 
+NtfsLog 
+PEAuthLog 
+RadioMgr 
+RdrLog 
+ReadyBoot 
+ReFSLog 
+SetupPlatform 
+SetupPlatformTel 
+SpoolerLogger 
+SQMLogger 
+TCPIPLOGGER 
+TileStore 
+Tpm
+TPMProvisioningService 
+UBPM 
+WdiContextLog 
+WFP-IPsec Trace 
+WiFiDriverIHVSession 
+WiFiDriverIHVSessionRepro 
+WiFiSession 
+WMI_Traces 
+```
