@@ -62,3 +62,22 @@ WiFiDriverIHVSessionRepro
 WiFiSession 
 WMI_Traces 
 ```
+# Acess Denied
+```
+DefenderApiLogger
+DefenderAuditLogger
+EventLog-Security
+NetCore
+RadioMgr
+```
+> [!NOTE]
+> Opening [Nsudo](https://github.com/QuakedK/Task-Destroyer/blob/main/Downloads/NSudoLG.exe), checking "Enable All Prilvileges" and in the "Address Bar" typing "CMD" and pasting the following works.
+> Defender needs to be disabled with [Dcontrol](https://github.com/QuakedK/Oneclick/raw/refs/heads/main/Downloads/V8.0/dControl.exe) otherwise DefenderApiLogger and DefenderAuditLogger will re-enable itself.
+
+```
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderApiLogger" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\DefenderAuditLogger" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\EventLog-Security" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\NetCore" /v "Start" /t REG_DWORD /d "0" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\Autologger\RadioMgr" /v "Start" /t REG_DWORD /d "0" /f
+```
