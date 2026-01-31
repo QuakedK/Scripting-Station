@@ -17,6 +17,7 @@ EventLog-Application - Breaks file explorer on windows 11.
 EventLog-System - Breaks file explorer on windows 11.
 Tpm - May cause Anti-Cheat issues.
 TPMProvisioningService - May cause Anti-Cheat issues.
+DiagLog - May blocks the Diagnostic Policy Service which is needed for Minecraft.
 
 ```
 # Full list
