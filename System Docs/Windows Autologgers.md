@@ -19,6 +19,8 @@ Tpm - May cause Anti-Cheat issues.
 TPMProvisioningService - May cause Anti-Cheat issues.
 DiagLog - May blocks the Diagnostic Policy Service which is needed for Minecraft.
 
+More than likely, DiagLog isn't the only thing breaking Minecraft. 
+
 ```
 # Full list
 ```
