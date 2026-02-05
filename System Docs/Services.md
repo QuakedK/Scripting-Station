@@ -236,6 +236,9 @@ sc config McmSvc start=disabled
 :: 24H2+
 sc config wuqisvc start=disabled
 
+:: 24H2+
+sc config midisrv start=disabled
+
 ```
 
 # All Services (Created from scratch)
