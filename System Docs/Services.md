@@ -77,7 +77,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v Start /t REG_DWORD /d
 **Cryptographic Service** or **CryptSvc** is responsible for checking digital signatures of Windows files, manages root certificates, and is required for Windows Update, drivers, and Store apps. 
 
 > [!CAUTION]
-> If **Cryptographic Service*** is disabled, updates and certificate validation will fail. Windows protects this service with WRP (Windows Resource Protection), so it can’t easily be removed or disabled. However deleting in the registry works, but in my experince things like services.msc won't work due to weired UAC behavior after disabling CryptSvc. Disabling UAC seems to fix this issue.
+> If **Cryptographic Service*** is disabled, updates and certificate validation will fail. Windows protects this service with WRP (Windows Resource Protection), so it can’t easily be removed or disabled. However deleting in the registry works, but in my experince things like services.msc won't work due to weired UAC behavior after disabling CryptSvc. Disabling UAC seems to fix this issue. However most importantly, anti-cheats will freak out and stop working when CryptSvc gets deleted.
 
 ```bat
 reg delete "HKLM\System\CurrentControlSet\Services\CryptSvc" /f
@@ -106,6 +106,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v Start
 ```bat
 :: Disable DcomLaunch
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v Start /t REG_DWORD /d 4 /f
+```
+
+# Device Install Service 
+**Device Install Service** or **DeviceInstall** enables a computer to recognize and adapt to hardware changes with little or no user input. Stopping or disabling this service will result in system instability.
+
+> [!CAUTION]
+> If the **Device Install Service** is deleted from the registry, all major device like Ethernet, Wifi and you're GPU will corrupt and stop working. However if the service is simply disabled no issues will occur!
+
+```bat
+:: Disable DeviceInstall
+reg delete "HKLM\SYSTEM\CurrentControlSet\Services\DeviceInstall" /f
+
+:: Disable DeviceInstall
+sc config DeviceInstall start=disabled
 ```
 
 # RPC Endpoint Mapper Service
@@ -241,7 +255,7 @@ sc config midisrv start=disabled
 
 ```
 
-# All Services (Created from scratch)
+# All Services (Created from scratch and 24H2 labed mean 24H2+)
 
 ```bat
 :: Windows Services.
@@ -378,14 +392,17 @@ sc config LxpSvc start=disabled
 
 ---------------------------------------------------
  
-sc config MapsBroker start=disabled  
+sc config MapsBroker start=disabled
+sc config McmSvc start=disabled :: Seemingly doesn't exist on 24H2.
 sc config McpManagementService start=disabled :: Seemingly only exist on 24H2.  
 sc config MessagingService start=disabled :: Because it's a contains a random UserID disable via registry.
-sc config MicrosoftEdgeElevationService start=disabled 
+sc config MicrosoftEdgeElevationService start=disabled
+sc config midisrv start=disabled :: Seemingly doesn't exist on 24H2.
 sc config MpsSvc start=auto :: Windows Core, left auto. 
 sc config MSDTC start=disabled
 sc config MSiSCSI start=disabled
-sc config msiserver start=demand :: Windows Core, left manual. 
+sc config msiserver start=demand :: Windows Core, left manual.
+sc config wuqisvc start=disabled :: Seemingly doesn't exist on 24H2.
 
 ---------------------------------------------------
 
