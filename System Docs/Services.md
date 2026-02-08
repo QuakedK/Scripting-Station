@@ -360,7 +360,7 @@ sc config GraphicsPerfSvc start=disabled
 
 ---------------------------------------------------
  
-sc config hidserv start=demand :: Windows Core, left manual.
+sc config hidserv start=disabled
 sc config hpatchmon start=disabled :: Seemlying only on 24H2.
 sc config HvHost start=disabled
 
@@ -649,3 +649,12 @@ TabletInputService :: Techinally exist on Windows 11 21H2, but not beyond that.
 UI0Detect
 WSService
 ```
+
+# Want Service disablers?
+[Oneclick](https://github.com/QuakedK/Oneclick) | Debloat and optimization tool.
+
+[Service Destroyer](https://github.com/QuakedK/Service-Destroyer) | Service Disabler.
+
+[Process Destroyer](https://github.com/QuakedK/Process-Destroyer) | Oneclick Continuer, in terms of disabling even more services!
+
+
