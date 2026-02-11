@@ -59,7 +59,7 @@ because with UAC off Windows auto-runs apps with admin rights. Ignoring the requ
 sc config Appinfo start=disabled
 
 :: Disable UAC
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v EnableLUA /t REG_DWORD /d 0
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableLUA" /t REG_DWORD /d "0" /f
 ```
 
 # Capability Access Manager Service
@@ -70,7 +70,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v E
 
 ```bat
 :: Disable camsvc
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Cryptographic Service
@@ -83,7 +83,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v Start /t REG_DWORD /d
 reg delete "HKLM\System\CurrentControlSet\Services\CryptSvc" /f
 
 :: Disable UAC
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v EnableLUA /t REG_DWORD /d 0
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableLUA" /t REG_DWORD /d "0" /f
 ```
 
 # CoreMessaging Service
@@ -94,7 +94,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /f /v E
 
 ```bat
 :: Disable CoreMessagingRegistrar
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # DCOM Server Process Launcher Service
@@ -105,11 +105,11 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\CoreMessagingRegistrar" /v Start
 
 ```bat
 :: Disable DcomLaunch
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DcomLaunch" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Device Install Service 
-**Device Install Service** or **DeviceInstall** enables a computer to recognize and adapt to hardware changes with little or no user input. Stopping or disabling this service will result in system instability.
+**Device Install Service** or **DeviceInstall** enables a computer to recognize and adapt to hardware changes with little or no user input.
 
 > [!CAUTION]
 > If the **Device Install Service** is deleted from the registry, all major device like Ethernet, Wifi and you're GPU will corrupt and stop working. However if the service is simply disabled no issues will occur!
@@ -130,7 +130,18 @@ sc config DeviceInstall start=disabled
 
 ```bat
 :: Disable RpcEptMapper
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\RpcEptMapper" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\RpcEptMapper" /v "Start" /t REG_DWORD /d "4" /f
+```
+
+# DNS Client
+**DNS Client Service** or **Dnscache** Dnscache (DNS Client) is the Windows service that caches DNS lookups and handles translating domain names (like google.com) into IP addresses faster and more efficiently.
+
+> [!CAUTION]
+> If the **DNS Client Service** is stopped or disabled, on windows 11 24H2+ and 23H2 via Cumulative Updates then enternet won't work.
+
+```bat
+:: Disable Dnscache
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Microsoft Passport Service
@@ -141,7 +152,7 @@ The **Microsoft Passport Service** or **NgcSvc** is responsible for managing Win
 
 ```bat
 :: Disable NgcSvc
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcSvc" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcSvc" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Microsoft Passport Container Service
@@ -152,7 +163,7 @@ The **Microsoft Passport Container Service** or **NgcCtnrSvc** works alongside [
 
 ```bat
 :: Disable NgcCtnrSvc
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcCtnrSvc" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcCtnrSvc" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Power Service
@@ -174,7 +185,7 @@ The **Udk User Service** or **UdkUserSvc** is responsible for Shell components S
 
 ```bat
 :: Disable UdkUserSvc
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\UdkUserSvc" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\UdkUserSvc" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # User Profile Service
@@ -185,7 +196,7 @@ The **User Profile Service** or **ProfSvc** is responsible for loading and unloa
 
 ```bat
 :: Disable ProfSvc
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\ProfSvc" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\ProfSvc" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Time Broker Service
@@ -206,7 +217,7 @@ reg add "HKLM\System\CurrentControlSet\Services\TimeBrokerSvc" /v "Start" /t REG
 > If **Windows Management Instrumentation Service** is disabled tools that rely on WMI will not work if disabled, even anticheats tend to break. Confrimed Broken Anticheat: Rocket League
 
 ```bat
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v Start /t REG_DWORD /d 4 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Winmgmt" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # New Services 24H2+ (Some appear on 23H2 too)
