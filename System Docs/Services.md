@@ -77,7 +77,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\camsvc" /v "Start" /t REG_DWORD 
 **Cryptographic Service** or **CryptSvc** is responsible for checking digital signatures of Windows files, manages root certificates, and is required for Windows Update, drivers, and Store apps. 
 
 > [!CAUTION]
-> If **Cryptographic Service*** is disabled, updates and certificate validation will fail. Windows protects this service with WRP (Windows Resource Protection), so it can’t easily be removed or disabled. However deleting in the registry works, but in my experince things like services.msc won't work due to weired UAC behavior after disabling CryptSvc. Disabling UAC seems to fix this issue. However most importantly, anti-cheats will freak out and stop working when CryptSvc gets deleted.
+> If **Cryptographic Service** is disabled, updates and certificate validation will fail. Windows protects this service with WRP (Windows Resource Protection), so it can’t easily be removed or disabled. However deleting in the registry works, but in my experince things like services.msc won't work due to weired UAC behavior after disabling CryptSvc. Disabling UAC seems to fix this issue. However most importantly, anti-cheats will freak out and stop working when CryptSvc gets deleted.
 
 ```bat
 reg delete "HKLM\System\CurrentControlSet\Services\CryptSvc" /f
@@ -120,6 +120,16 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Services\DeviceInstall" /f
 
 :: Disable DeviceInstall
 sc config DeviceInstall start=disabled
+```
+
+# Display Policy Service
+**Display Policy Service** or **DispBrokerDesktopSvc** is responsible for manging the connection and configuration of local and remote displays.
+
+> [!CAUTION]
+> If **Display Policy Service** is disabled, on Windows 11 24H2+ your monitor's resolution, Hz and position will reset.
+
+```bat
+sc config DispBrokerDesktopSvc start=disabled
 ```
 
 # RPC Endpoint Mapper Service
