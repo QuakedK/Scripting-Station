@@ -123,7 +123,7 @@ sc config DeviceInstall start=disabled
 ```
 
 # Display Policy Service
-**Display Policy Service** or **DispBrokerDesktopSvc** is responsible for manging the connection and configuration of local and remote displays.
+**Display Policy Service** or **DispBrokerDesktopSvc** is responsible for managing the connection and configuration of local and remote displays.
 
 > [!CAUTION]
 > If **Display Policy Service** is disabled, on Windows 11 24H2+ your monitor's resolution, Hz and position will reset.
