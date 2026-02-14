@@ -62,6 +62,17 @@ sc config Appinfo start=disabled
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableLUA" /t REG_DWORD /d "0" /f
 ```
 
+# AppX Deployment Service
+**AppX Deployment Service** or **AppXSvc** is responsible for providing infrastructure support for deploying Store applications
+
+> [!CAUTION]
+> If **AppX Deployment Service** is disabled, it may cause issues with Microsoft Store apps and other Windows components that rely on AppX packages. Notepad++ glitches out explorer causing it refresh when left-click things in windows.
+
+```bat
+:: Disable AppXSvc
+reg add "HKLM\System\CurrentControlSet\Services\AppXSvc" /v "Start" /t REG_DWORD /d "4" /f
+```
+
 # Capability Access Manager Service
 **Capability Access Manager Service** or **camsvc** is responsible for managing permissions for apps to access certain system capabilities. 
 
