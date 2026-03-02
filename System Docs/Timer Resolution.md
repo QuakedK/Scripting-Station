@@ -1,4 +1,4 @@
-# Timer Resolution Options
+# Timer Resolution
 
 <img width="978" height="512" alt="image" src="https://github.com/user-attachments/assets/2adcb8a5-22a8-4961-b5af-39560fc5eb25" />
 
