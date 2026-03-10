@@ -60,7 +60,7 @@ set "games[14]=C:\Program Files (x86)\Steam\steamapps\common\Far Cry 3\bin\farcr
 set "games[15]=C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest\SonsOfTheForest.exe"
 set "games[16]=C:\Program Files (x86)\Steam\steamapps\common\Mafia Definitive Edition\mafiadefinitiveedition.exe"
 set "games[17]=C:\Program Files (x86)\Steam\steamapps\common\The Outlast Trials\OPP\Binaries\Win64\TOTClient-Win64-Shipping.exe"
-set "games[18]=%USERPROFILE%\AppData\Local\osu!\osu!.exe"
+set "games[18]=%USERPROFILE%\AppData\Local\osu^!\osu^!.exe"
 set "games[19]=C:\Riot Games\VALORANT\live\VALORANT.exe"
 set "games[20]=C:\Program Files\Epic Games\VALORANT\VALORANT.exe"
 set "games[21]=C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe"
@@ -171,4 +171,5 @@ endlocal
 echo ✔  Graphics Preferences, Priority and FSO applied successfully.
 timeout 999 > nul
 exit
+
 
