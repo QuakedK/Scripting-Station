@@ -1,6 +1,13 @@
 # Timer Resolution OFF vs ON Testing
 Timer Resolution was set at 0.5000ms, as my R7 9850X3D had the lowest and most stable deltas on that resolution.
 
+# Specs: 
+```
+R7 9850X3D (SMT OFF + Idle OFF) 
+Nvidia RTX 4070 Super (566.14)	 
+Teamgroup 2x16GB 7200Mhz CL34 (@6200mhz CL28)
+```
+
 # Xperf
 | Timer Resolution: OFF                    |   Test 1 |   Test 2 |   Test 3 |   Test 4 |   Test 5 |    Average |
 | ---------------------------------------- | -------: | -------: | -------: | -------: | -------: | ---------: |
