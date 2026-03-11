@@ -1,6 +1,12 @@
 # Timer Resolution OFF vs ON Testing
 Timer Resolution was set at 0.5000ms, as my R7 9850X3D had the lowest and most stable deltas on that resolution.
 
+[Full Data](https://github.com/QuakedK/Scripting-Station/raw/refs/heads/main/Benchmarking/Timer%20Resolution%20Benchmark/Timer%20Resolution%20(Full%20Test).zip)
+
+[Xperf](https://github.com/QuakedK/Scripting-Station/raw/refs/heads/main/Benchmarking/Xperf/xperf.7z)
+
+[XTW](https://github.com/QuakedK/Scripting-Station/blob/main/Benchmarking/XTW/XTW%20Download%20Link.md)
+
 # Specs: 
 ```
 R7 9850X3D (SMT OFF + Idle OFF) 
