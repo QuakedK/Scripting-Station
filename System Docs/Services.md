@@ -144,7 +144,7 @@ sc config DispBrokerDesktopSvc start=disabled
 ```
 
 # DNS Client
-**DNS Client Service** or **Dnscache** Dnscache (DNS Client) is the Windows service that caches DNS lookups and handles translating domain names (like google.com) into IP addresses faster and more efficiently.
+**DNS Client Service** or **Dnscache** (DNS Client) is the Windows service that caches DNS lookups and handles translating domain names (like google.com) into IP addresses faster and more efficiently.
 
 > [!CAUTION]
 > If the DNS Client Service is disabled, starting on windows 11 24H2+ and now older versions like 23H2-21H2 through Cumulative Updates then ethernet will stop working.
