@@ -143,17 +143,6 @@ sc config DeviceInstall start=disabled
 sc config DispBrokerDesktopSvc start=disabled
 ```
 
-# RPC Endpoint Mapper Service
-**RPC Endpoint Mapper Service** or **RpcEptMapper** Resolves RPC interfaces identifiers to transport endpoints.
-
-> [!CAUTION]
-> If the **RPC Endpoint Mapper Service** is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly. And you won't be able to boot into windows!
-
-```bat
-:: Disable RpcEptMapper
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\RpcEptMapper" /v "Start" /t REG_DWORD /d "4" /f
-```
-
 # DNS Client
 **DNS Client Service** or **Dnscache** Dnscache (DNS Client) is the Windows service that caches DNS lookups and handles translating domain names (like google.com) into IP addresses faster and more efficiently.
 
@@ -196,6 +185,17 @@ The **Power Service** manages power policy and system power events, like **sleep
 ```bat
 :: Disable Power
 sc config Power start=disabled
+```
+
+# RPC Endpoint Mapper Service
+**RPC Endpoint Mapper Service** or **RpcEptMapper** Resolves RPC interfaces identifiers to transport endpoints.
+
+> [!CAUTION]
+> If the **RPC Endpoint Mapper Service** is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly. And you won't be able to boot into windows!
+
+```bat
+:: Disable RpcEptMapper
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\RpcEptMapper" /v "Start" /t REG_DWORD /d "4" /f
 ```
 
 # Udk User Service
