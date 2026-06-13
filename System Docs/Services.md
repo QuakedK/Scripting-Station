@@ -158,7 +158,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Dnscache" /v "Start" /t REG_DWOR
 The **Microsoft Passport Service** or **NgcSvc** is responsible for managing Windows Hello/Passport (key-based authentication) for user sign-in.
 
 > [!CAUTION]
-> If **Microsoft Passport Service** login will be broken unless you installed with an offline/local account. Similar to [User Profile Service](https://github.com/QuakedK/Scripting-Station/blob/main/System%20Docs/Services.md#user-profile-service)
+> If **Microsoft Passport Service** is disabled login will be broken unless you installed with an offline/local account. (Like seen in Process Destroyer) Similar to [User Profile Service](https://github.com/QuakedK/Scripting-Station/blob/main/System%20Docs/Services.md#user-profile-service).
 
 ```bat
 :: Disable NgcSvc
@@ -169,7 +169,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\NgcSvc" /v "Start" /t REG_DWORD 
 The **Microsoft Passport Container Service** or **NgcCtnrSvc** works alongside [Microsoft Passport Service](https://github.com/QuakedK/Scripting-Station/edit/main/System%20Docs/Services.md#microsoft-passport-service) to manage the containers and keys used by Windows Hello / Microsoft Passport for authentication.
 
 > [!CAUTION]
-> If **Microsoft Passport Container Service** login will be broken unless you installed with an offline/local account. Similar to [User Profile Service](https://github.com/QuakedK/Scripting-Station/blob/main/System%20Docs/Services.md#user-profile-service)
+> If **Microsoft Passport Container Service** is disabled login will be broken unless you installed with an offline/local account. (Like seen in Process Destroyer) Similar to [User Profile Service](https://github.com/QuakedK/Scripting-Station/blob/main/System%20Docs/Services.md#user-profile-service). 
 
 ```bat
 :: Disable NgcCtnrSvc
