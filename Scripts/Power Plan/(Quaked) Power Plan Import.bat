@@ -1,6 +1,6 @@
 :: Made by Quaked
 :: TikTok: _Quaked_
-:: Discord: https://discord.gg/B8EmFVkdFU
+:: Discord: https://discord.gg/8NqDSMzYun
  
 @echo off
 title Power Plan Import
@@ -9,7 +9,7 @@ color 9
 :: (Quaked) Check for Admin Privileges.
 fltmc >nul 2>&1
 if not %errorlevel% == 0 (
-    powershell -Command "Write-Host 'Oneclick is required to be run as *Administrator.*' -ForegroundColor White -BackgroundColor Red" 
+    powershell -Command "Write-Host 'Power Plan Import is required to be run as *Administrator.*' -ForegroundColor White -BackgroundColor Red" 
     powershell -Command "Write-Host 'Please Click *Yes* to the following prompt!' -ForegroundColor White -BackgroundColor Red" 
     timeout 3 > nul
     PowerShell Start -Verb RunAs '%0'
@@ -131,5 +131,7 @@ if /i "%option%"=="Y" (
 :Done
 rd /s /q "C:\Power Plan" >nul 2>&1
 exit
+
+
 
 
