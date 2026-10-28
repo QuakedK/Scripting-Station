@@ -37,6 +37,13 @@ Important: Make sure you don't connect to ethernet/Wifi yet.
 7. Connect to Ethernet/Wi-Fi.
 
 ---
-   
+
+# Recommended Windows Versions
+
+🧷 | [Quaked Win 11 22H2, 22621.525, English, Home](https://www.mediafire.com/file/rpa06q0xvvjkold/(_Quaked)_Optimized_Win_11.iso/file) (Updated September 2022)
+
+🧷 | [Windows 11, version 22H2, 22621.525](https://files.rg-adguard.net/language/3ac6a9cf-4d28-637e-3e5e-7206808109a7) (Updated September 2022)
+
+🧷 | [Windows 11, version 23H2, 22631.5624](https://files.rg-adguard.net/language/cc059826-7ef6-99aa-5aa8-5a59d99697fa) (Updated July 2025)
 
 
