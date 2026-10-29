@@ -46,4 +46,12 @@ Important: Make sure you don't connect to ethernet/Wifi yet.
 
 🧷 | [Windows 11, version 23H2, 22631.5624](https://files.rg-adguard.net/language/cc059826-7ef6-99aa-5aa8-5a59d99697fa) (Updated July 2025)
 
+# Windows Install Tutorial
+
+🔗 | [Quaked Guide](https://youtu.be/iO6n63TWv-E)
+
+🔗 | [Chris Titus Rufus Guide](https://youtu.be/PYOsevW3KdA?si=TXlkbaY5YiDFsnRW&t=1381)
+
+
+
 
